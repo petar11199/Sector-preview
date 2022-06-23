@@ -1,0 +1,63 @@
+section > *:not(.visible) {
+  opacity: 0;
+  filter: blur(10px);
+  transform: translate3d(0, 20px, 0);
+}
+.mobile section > *:not(.visible) {
+  filter: none;
+}
+section::after,
+section::before {
+  opacity: 0;
+}
+.section--right-align::after,
+.section--right-align::before {
+  opacity: 0;
+  transform: translate3d(20px, 0, 0);
+}
+.visible {
+  opacity: 1;
+  filter: none;
+  transform: translate3d(0, 0, 0);
+  transition: 1s ease-in-out;
+}
+
+.section-visible::after,
+.section-visible::before {
+  opacity: 1;
+  transition: 1s ease-in-out;
+}
+
+.welcome__signiture,
+.welcome__title,
+.welcome__subtitle,
+.welcome .button,
+.scroll-letters {
+  opacity: 0;
+  filter: blur(10px);
+  transform: translate3d(0, 20px, 0);
+  animation: welcome-transform 2s ease forwards;
+}
+.welcome__signiture {
+  animation-delay: 100ms;
+}
+.welcome__title {
+  animation-delay: 200ms;
+}
+.welcome__subtitle {
+  animation-delay: 500ms;
+}
+.welcome .button {
+  animation-delay: 600ms;
+}
+.scroll-letters {
+  animation-delay: 1000ms;
+}
+
+@keyframes welcome-transform {
+  to {
+    filter: none;
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}

@@ -1,0 +1,39 @@
+/* BUTTONS */
+.button {
+  border: none;
+  background-color: transparent;
+  padding: 0.7rem 0;
+  font: 700 calc(var(--primaryTextSize) * 0.8) Roboto, sans-serif;
+  cursor: pointer;
+  border-radius: 3px;
+  text-align: center;
+  overflow: hidden;
+  width: 100%;
+  border: 1px solid var(--primaryContrast);
+  transition: 100ms ease-in;
+  outline: 0 solid var(--primaryColor);
+}
+.button:hover {
+  transition: 100ms ease-in;
+  outline-width: 1px;
+  outline-offset: 3px;
+}
+.button--primary {
+  background: white;
+  color: black;
+}
+.button--icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button--icon img {
+  width: 15px;
+  margin-right: 1rem;
+}
+
+@media (min-width: 576px) {
+  .button {
+    max-width: 200px;
+  }
+}
