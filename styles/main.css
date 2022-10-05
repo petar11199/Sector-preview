@@ -195,51 +195,6 @@ section::before {
   bottom: 0;
   left: 0;
 }
-
-/* SCROLLBAR */
-.scrollbar-wrapper {
-  position: fixed;
-  justify-content: center;
-  right: 0;
-  top: 0;
-  height: 100%;
-  padding: 0 20px;
-  transition: 300ms ease;
-  display: none;
-}
-.scrollbar {
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  width: 5px;
-  border-radius: 4px;
-  transition: opacity 500ms ease, width 300ms ease;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background: transparent linear-gradient(180deg, #FFFFFF00 0%, #FFFFFF4D 24%, #FFFFFF4D 71%, #FFFFFF00 100%) 0% 0% no-repeat padding-box;
-}
-.scrollbar-wrapper:hover .scrollbar {
-  opacity: 1 !important;
-}
-.scrollbar__section {
-  background-color: var(--canvasColorCss);
-  margin-left: -9px;
-  border-radius: 50%;
-  width: 22px;
-  height: 22px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font: 900 0.8rem Roboto, sans-serif;
-  opacity: 0;
-  user-select: none;
-}
-.scrollbar__section--visible {
-  opacity: 1;
-  transition: 2000ms;
-}
-
 /* SECTIONS */
 
 /* WELCOME */
@@ -874,8 +829,5 @@ section::before {
     width: 992px;
     padding: 0;
     margin: 0 auto;
-  }
-  .scrollbar-wrapper {
-    display: flex;
   }
 }
